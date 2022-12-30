@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/animation/javascript.js" type="text/javascript"></script>
+    <title>Document</title>
+</head>
+<body id="content">
+    <h1 class="classme">Welcome File</h1>
+    <label for="male">Male</label>
+    <input type="radio" name="gender" id="male" value="male" onclick="msg($(this).val());">
+    <label for="female">Female</label>
+    <input type="radio" name="gender" id="female" value="female" onclick="msg($(this).val());">
+    <h1>Go back file</h1>
+
+    <ul>
+        <li id="city">City</li>
+        <li id="state">State</li>
+        <li id="country">Country</li>
+    </ul>
+
+    <ol class="items">
+        <li>Cocolate</li>
+        <li>Burgur</li>
+        <li>chess</li>
+        <div id="box">
+        </div>
+    </ol>
+
+</body>
+<script>
+    $("document").ready(function(){
+        $("h1").css("color","red");
+        $("#city").css("color","red");
+        $("#state").css("color","blue");
+        $("#country").css("color","orange");
+        $(".items").css("font-size","large");
+        $("h1:not(.classme)").css("color","blue");
+        $(".classme").append("Hello there");
+        $("#box").html("<p>Hello there<p>");
+        $(".items").toggleClass("highlight");
+    })
+    window.addEventListener("DOMContentLoaded",function(event){
+        var elem = document.getElementById("content");
+        var para = document.createElement("h2");
+        var text = document.createTextNode("The page is just loaded");
+
+        para.append(text);
+        elem.appendChild(para);
+    })
+    function msg(type)
+    {
+        alert(type);
+    }
+</script>
+<style>
+    .highlight{
+        color: red;
+    }
+</style>
+</html>

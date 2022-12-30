@@ -1,0 +1,133 @@
+ 
+     $(document).ready(function() {
+        var array = [11,21,31,41];
+        console.log(array[0] + ' ' + array[1] + " " + array[2]);
+    });
+        
+        Create the array using new keyword
+
+        var array = new Array();
+
+        To insert the value in array we have push()
+        array.push("one");
+        array.push("two");
+        array.push("three");
+        array.push("zero");
+        array.push("eleven");
+        array.push("seven hundred");
+        array.push("thousand");
+        
+        console.log(array);     //to print the value in console at log level
+        
+        To delete last index element of an array use pop()
+
+        array.pop();
+        console.log(array);
+        array.push("hundred");
+        console.log(array);
+        
+        To delete element of first index we have shift method
+        array.shift();
+        console.log(array);
+        
+        To print element within range we have slice method
+        array.slice(1,4);
+        console.log(array);
+        msg("Hello");
+
+        1. length : to find the size of varible.
+        2. slice() : to get specific range of string, NOTE: in slice function it is mandatory to specify start and end index
+
+        example:
+        msg = "Welcome to javascript world";
+        msg.slice(start_index, end_index);
+
+        3. substr : We have to pass start index and count of character that we need
+
+        msg.substr(0,7);
+        output: Welcome
+
+        4. substring : To get range of string, NOTE: It is not mandatory to specify start_index. But last_index is mandatory.
+
+        msg.substring(7);
+        output: Welcome
+
+        msg.substring(8,10);
+        output: to
+
+        5. replace : It replace only first character in the string
+
+        ex. var a = javascript;  a.replace(a,j); 
+        output : jjvascript
+    
+        6. replaceAll : It replace all character given in the argument.
+        ex. a = javascript;   a.replaceAll(a,j);
+        output : jjvjscript
+
+        7. toLowerCase : output: JAVASCRIPT
+        8. toUpperCase : output: javascript
+        9. concat : It combines tostring.
+        10. trim : removes space before and after the string
+        11. split : It is used to split the character.
+
+        a.split('a');
+
+        output : {'j','v','script'};
+        
+        -------------------------------------------------------------------------------
+
+        Syntax:
+        $("selector").function();
+
+        $("#male").attr(":checked", true)
+        output : false 
+               i.e the radio button is not filled
+
+        $("#male").attr(":checked", true)
+        output : true 
+                i.e the radio button is filled.
+
+        before and after :
+
+        $("h1").before("<p>hello</p>");
+
+        In this code the p tag will be added before every h1 tag.
+
+        $("h1").after("<p>hello</p>");
+
+        In this code the p tag will be added after every h1 tag.
+
+        ---------------------------------------------------------------------
+        This tag specifies that wheather the class contain with the specified name or not
+        $("h1").hasClass("classme");
+        output: true
+
+        Add and Remove Class :
+        $(".h1").addClass();
+            output : jQuery.fn.init [prevObject: jQuery.fn.init(1)]
+        
+        $("h1").addClass("here");
+            output : jQuery.fn.init(2) [h1.classme.here, h1.here, prevObject: jQuery.fn.init(1)]
+        
+        $("h1").removeClass("here");
+            output : jQuery.fn.init(2) [h1.classme, h1, prevObject: jQuery.fn.init(1)
+
+
+       ----------------------------------------------------------------------------
+
+       To check wheather the class is present or not we have hasClass()
+
+       $("h1").hasClass("btn-first");
+       output : false
+
+       To add an attribute in any tag then we have attr()
+
+       $("h1").attr("class","btn-first")
+
+       output: <h1 class="btn-first">Welcome to js</h1>
+
+       $("h1").attr("location","mumbai")
+
+       output: <h1 location="mumbai">Welcome to js</h1>
+
+

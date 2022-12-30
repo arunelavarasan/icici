@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/practice/style.css">
+    <script src="/animation/javascript.js"></script>
+    <title>Document</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+    .output-details > button{
+        height: 30px;
+        width: 30px;
+    }
+    .details{
+        display: inline;
+    }
+    #edit{
+        float: right;
+    }
+    #delete{
+        float: left;
+    }
+</style>
+
+<body>
+    <div id="fill-details" id="right">
+        <h1>Add Student Details</h1>
+        <div class="fill-form">
+            <div class="form-container">
+                <label for="name">Name</label>
+                <input type="text" id="name" value="">
+            </div>
+            <div class="form-container">
+                <label for="university">University</label>
+                <input type="text" id="university" value="">
+            </div>
+            <div class="form-container"><label for="roll">Roll No</label>
+                <input type="text" id="roll" value="">
+            </div>
+            <div class="form-container"><label for="country">Country</label>
+                <input type="text" id="country" value="">
+            </div>
+            <div class="form-container">
+                <label for="state">State</label>
+                <input type="text" id="state" value="">
+            </div>
+            <div class="form-container">
+                <label for="city">city</label>
+                <input type="text" id="city" value="">
+            </div>
+            <div class="form-container" style="padding-top: 15px;">
+                <button style="background-color: grey;" class="btn">Add details</button>
+            </div>
+        </div>
+    </div>
+    <div class="output" id="left">
+        <span class="output-details">
+            
+        </span>
+    </div>
+</body>
+<script>
+    $("document").ready(function () {
+        $("button").on("click", function () {
+            var id = 1;
+            var name = $("#name").val();
+            var university = $("#university").val();
+            var roll = $("#roll").val();
+            var country = $("#country").val();
+            var state = $("#state").val();
+            var city = $("#city").val();
+            var details = "<h3>" + name + "&nbsp" + university + "&nbsp" + roll + "&nbsp" + country + "&nbsp" + state + "&nbsp" + city + "</h3>";
+            details = details + "<button id='delete'><img src='/w3school/icons/bin.png' height='20px' width='20px'></button><button id='edit'><img src='/w3school/icons/edit.png' height='20px' width='20px'></button>";
+            //$(".output-details").append("<div class='details"+id+"></div>");
+            $(".output-details").append(details).wrap("");
+            id = id+1;
+        });
+    })
+</script>
+
+</html>

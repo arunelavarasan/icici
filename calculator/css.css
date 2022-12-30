@@ -1,0 +1,27 @@
+.grid-container {
+    height: 400px;
+    width: 400px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: #5d6a74;
+    padding: 4px;
+  }
+
+  #h {
+    height: 50px;
+    width: 368px;
+    border: 10px solid black;
+  }
+
+  div[class^=grid-item] {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 50px;
+    text-align: center;
+  }
+
+  .zero {
+    display: inline;
+    float: right;
+  }
